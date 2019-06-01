@@ -1,17 +1,22 @@
 import React, { Component } from "react";
 import { Text, StyleSheet, View } from "react-native";
-import Header from "./src/Header";
-import Footer from "./src/Footer";
-export default class App extends Component {
+import Header from "./src/components/Header";
+import It_device from "./src/components/It_device";
+import FooterTabsIconTextExample from "./src/components/Footer";
+export default class App extends React.Component {
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <Header />
-        <Text> textInComponent </Text>
-        <Footer />
+        <It_device />
+        <FooterTabsIconTextExample />
       </View>
     );
   }
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  }
+});

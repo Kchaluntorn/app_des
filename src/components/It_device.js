@@ -1,47 +1,63 @@
 import React, { Component } from "react";
-import { Image } from "react-native";
+import Slideshow from "react-native-image-slider-show";
+
 import {
   Container,
   Header,
   Content,
   Card,
   CardItem,
-  Thumbnail,
   Text,
-  Button,
-  Icon,
-  Left,
   Body,
-  Right
+  Button
 } from "native-base";
 export default class It_device extends Component {
   render() {
     return (
-      <Card>
-        <CardItem>
-          <Left>
-            <Thumbnail
-              source={{
-                uri:
-                  "https://kikloginonlinee.com/wp-content/uploads/2015/06/kik-login-on-any-device.png"
-              }}
-            />
+      <Content>
+        <Card>
+          <CardItem header>
+            <Text>Device News</Text>
+          </CardItem>
+          <CardItem>
             <Body>
-              <Text>News device</Text>
-              <Text note>1/6/62</Text>
+              <Slideshow
+                dataSource={[
+                  { url: "http://placeimg.com/640/480/any" },
+                  { url: "http://placeimg.com/640/480/any" },
+                  { url: "http://placeimg.com/640/480/any" }
+                ]}
+              />
             </Body>
-          </Left>
-        </CardItem>
-        <CardItem cardBody>
-          <Image
-            source={{
-              uri:
-                "https://kikloginonlinee.com/wp-content/uploads/2015/06/kik-login-on-any-device.png"
-            }}
-            style={{ height: 200, width: null, flex: 1 }}
-          />
-        </CardItem>
-      </Card>
+          </CardItem>
+          <CardItem footer>
+            <Button info>
+              <Text> Info </Text>
+            </Button>
+          </CardItem>
+        </Card>
+        <Card>
+          <CardItem header>
+            <Text>Device News</Text>
+          </CardItem>
+          <CardItem>
+            <Body>
+              <Slideshow
+                dataSource={[
+                  { url: "http://placeimg.com/640/480/any" },
+                  { url: "http://placeimg.com/640/480/any" },
+                  { url: "http://placeimg.com/640/480/any" }
+                ]}
+              />
+            </Body>
+          </CardItem>
+          <CardItem footer>
+            <Button info>
+              <Text> Info </Text>
+            </Button>
+          </CardItem>
+        </Card>
+      </Content>
     );
   }
 }
